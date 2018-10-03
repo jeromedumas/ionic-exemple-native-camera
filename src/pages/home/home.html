@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Prise de vue
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-row>
+    <ion-col>
+      <button ion-button icon-left color="primary" round full (click)="getPicture()">
+        <ion-icon name='camera' is-active="false"></ion-icon>
+        <span>Prendre une photo</span>
+      </button>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <ion-card>
+        <img [src]="base64Image" *ngIf="base64Image" />
+      </ion-card>
+    </ion-col>
+  </ion-row>
+
+</ion-content>
